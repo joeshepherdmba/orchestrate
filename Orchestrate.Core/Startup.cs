@@ -31,7 +31,7 @@ namespace Orchestrate.Core
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ProjectContext>(options =>
-                                                  options.UseInMemoryDatabase("testDB"));
+                                                  options.UseMySql(Configuration.GetConnectionString("DefaultConnection")));
             // Add framework services.
             services.AddMvc();
         }

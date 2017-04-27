@@ -54,13 +54,13 @@ namespace Orchestrate.Core.Data
 
 
             //Add Tasks
-            var tasks = new TaskModel[]
+            var tasks = new Task[]
             {
-                new TaskModel{ Title="Review Current Website Design", Description="Review design", AssignedTo=user, DueDate=DateTime.Now, StartDate = DateTime.Now,
+                new Task{ Title="Review Current Website Design", Description="Review design", AssignedTo=user, DueDate=DateTime.Now, StartDate = DateTime.Now,
                     EndDate = DateTime.Now, EstDuration=15, Priority=Priority.Medium, Status=TaskStatus.New}
             };
 
-			foreach (TaskModel t in tasks)
+			foreach (Task t in tasks)
 			{
 				context.Tasks.Add(t);
 			}

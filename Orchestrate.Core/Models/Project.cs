@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using Orchestrate.Core.Models;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Orchestrate.Core.Models
 {
@@ -9,11 +11,13 @@ namespace Orchestrate.Core.Models
         public int ID { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
-        public User ProjectOwner { get; set; }
+        [ForeignKey("ProjectOwner")]
+        public int ProjectOwnerID { get; set; }
         public double ProjectValue { get; set; }
         public double VelocityFactor { get; set; }
         public double HealthFactor { get; set; }
 
-        public ICollection<TaskModel> Tasks { get; set; }
+		public User ProjectOwner { get; set; }
+        public virtual ICollection<Task> Tasks { get; set; }
     }
 }

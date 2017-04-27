@@ -4,7 +4,7 @@ using static Orchestrate.Core.Models.Enums;
 
 namespace Orchestrate.Core.Models
 {
-    public class TaskModel
+    public class Task
     {
 		public int ID
         {

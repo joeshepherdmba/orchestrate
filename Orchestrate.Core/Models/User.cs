@@ -8,7 +8,7 @@ namespace Orchestrate.Core.Models
 		public string LastName { get; set; }
 		public string FirstMidName { get; set; } 
 
-        public ICollection<TaskModel> Tasks { get; set; }
+        public ICollection<Task> Tasks { get; set; }
         public ICollection<TimeEntry> TimeEntries { get; set; }
 	}
 }

@@ -14,6 +14,6 @@ namespace Orchestrate.Core.Models
         public TimeStatus Status { get; set; }
         public int TaskID { get; set; }
 
-        public TaskModel Task { get; set; }
+        public Task Task { get; set; }
     }
 }
