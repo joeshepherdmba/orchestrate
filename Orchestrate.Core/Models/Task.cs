@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using static Orchestrate.Core.Models.Enums;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Orchestrate.Core.Models
 {
@@ -60,7 +62,9 @@ namespace Orchestrate.Core.Models
             set;
         }
 
-        public User AssignedTo { get; set; }
+        [ForeignKey("AssignedTo")]
+        public int AssignedToUserID { get; set; }
+        public virtual User AssignedTo { get; set; }
 
         public virtual ICollection<TimeEntry> TimeEntry
         {
